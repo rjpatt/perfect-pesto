@@ -11,7 +11,7 @@ body {
     border-radius: 40px;
 }
 
-/* The recipe class doesn't display upon first loading the site. */
-.recipe {
+/* The hidden class doesn't display upon first loading the site. */
+.hidden {
     display: none;
 }

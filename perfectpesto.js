@@ -6,6 +6,8 @@ const pesto = {
     nuts: 42,
     oil: 130.9
 }
+//selecting the recipe ID to add and remove classes
+const recipeBox = document.querySelector('#recipe');
 
 //a function to update the text in the recipe
 const updateRecipe = () => {
