@@ -5,7 +5,6 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
 }
 /* I find rounded corners on images visually pleasing. */
 .banner img {
