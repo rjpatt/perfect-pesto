@@ -6,26 +6,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Make the Perfect Pesto!</title>
+    <!-- Adding in Open Sans Google font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Connects our CSS -->
+    <link rel="stylesheet" href="perfectpesto.css">
 </head>
 
 <body>
-    <h1>Perfect Pesto</h1>
+
+    <head>
+        <h1>Perfect Pesto</h1>
+    </head>
+    <!-- Some intro text, may update later. -->
     <p>Make the perfect pesto! For the perfect ratios, you'll need a digital kitchen scale that can measure in grams. We
         like to make our pesto in a food processor, but you can also use a mortar and pestle if preferred.
     </p>
+    <!-- Big image of pesto pasta. It's pretty, but should maybe adjust where or how big it appears -->
     <div class="banner"><img
             src="https://images.unsplash.com/photo-1605590955562-be1a5fda4161?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1588&q=80"
             alt="Pesto Pasta" width="90%"></div>
+    <!-- This is the section that will actually take input -->
     <h2>How much basil do you have?</h2>
     <label for="basil">Basil in grams</label>
+    <!-- I want to make sure this is a number, but it could be a float. I used 70 grams as the default since that's close to what you need for enough pasta for 2 people -->
     <input type="number" name="basil" id="basil" min="0" value="70">
+    <!-- When submitted, the form will display the recipe with updated numbers. -->
     <input type="button" value="Give me the recipe!">
+    <!-- The recipe class is hidden by default, but will change to appearing once the button is pressed. -->
     <div class="recipe">
-        <h2>Ingredients</h2>
+        <h2>The perfect pesto pasta</h2>
+        <h3>Ingredients</h3>
         <ul>
-            <li>Your <span class="basilAmount">70</span> grams of basil</li>
+            <!-- The spans below contain the amount in grams (or mLs) of each ingredient. These will be changed upon submitting the form. -->
+            <li>Your <span class="basil-grams">70</span> grams of basil</li>
             <li><span class="pasta">252</span> grams of short pasta, such as penne</li>
             <li><span class="cheese">42</span> grams of Parmigiano Reggiano, Grana Padano, or similar</li>
             <li><span class="nuts">42</span> grams of nuts (we prefer walnuts, but pine nuts are the classic nut for
@@ -35,7 +49,8 @@
                 preferred.</li>
             <li>Salt to taste</li>
         </ul>
-        <h2>Directions</h2>
+        <!-- The directions are standard and won't change. -->
+        <h3>Directions</h3>
         <ol>
             <li>Boil a medium saucepot of water and cook the pasta one minute less than the package direction, or until
                 al dente. Reserve a ladle-full of pasta water in a small bowl, then drain your pasta.</li>
@@ -51,6 +66,8 @@
             <li>Devour.</li>
         </ol>
     </div>
+    <!-- This links our JavaScript to make the site function. -->
+    <script src="perfectpesto.js"></script>
 </body>
 
 </html>

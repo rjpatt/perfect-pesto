@@ -1,17 +1,18 @@
+/* I'm using Open Sans and Flexbox here for the body. */
 body {
     font-family: 'Open Sans', sans-serif;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    overflow: hidden;
-    margin: 0;
+}
+/* I find rounded corners on images visually pleasing. */
+.banner img {
+    border-radius: 40px;
 }
 
-.banner {
-    border-radius: 50px;
-}
-
+/* The recipe class doesn't display upon first loading the site. */
 .recipe {
     display: none;
 }
