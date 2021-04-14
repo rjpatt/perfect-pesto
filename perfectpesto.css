@@ -11,3 +11,7 @@ body {
 .banner {
     border-radius: 50px;
 }
+
+.recipe {
+    display: none;
+}
