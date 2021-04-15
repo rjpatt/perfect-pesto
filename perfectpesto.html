@@ -28,11 +28,13 @@
             alt="Pesto Pasta" width="90%"></div>
     <!-- This is the section that will actually take input -->
     <h2>How much basil do you have?</h2>
-    <label for="basil">Basil in grams</label>
-    <!-- I want to make sure this is a number, but it could be a float. I used 70 grams as the default since that's close to what you need for enough pasta for 2 people -->
-    <input type="number" name="basil" id="basil" min="0" value="70">
-    <!-- When submitted, the form will display the recipe with updated numbers. -->
-    <input type="button" value="Give me the recipe!">
+    <form id="qtyForm">
+        <label for="qty">Basil in grams</label>
+        <!-- I want to make sure this is a number, but it could be a float. -->
+        <input type="number" name="qty" id="qty" min="0" placeholder="70">
+        <!-- When submitted, the form will display the recipe with updated numbers. -->
+        <button>Give me the recipe!</button>
+    </form>
     <!-- The recipe class is hidden by default, but will change to appearing once the button is pressed. -->
     <div id="recipe" class="hidden">
         <h2>The perfect pesto pasta</h2>

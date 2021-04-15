@@ -8,6 +8,7 @@ const pesto = {
 }
 //selecting the recipe ID to add and remove classes
 const recipeBox = document.querySelector('#recipe');
+const qtyForm = document.querySelector('#qtyForm');
 
 //a function to update the text in the recipe
 const updateRecipe = () => {
@@ -26,3 +27,12 @@ const calcPesto = basilAmount => {
     pesto.nuts = (basilAmount * 0.6);
     pesto.oil = (basilAmount * 1.87);
 }
+
+qtyForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    const qty = qtyForm.elements.qty;
+    calcPesto(qty.value);
+    updateRecipe();
+    recipeBox.classList.remove('hidden');
+    qty.value = '';
+})
