@@ -25,10 +25,10 @@ const updateRecipe = () => {
 const calcPesto = basilAmount => {
     const basilAmt = parseFloat(basilAmount);
     pesto.basil = basilAmt;
-    pesto.pasta = (basilAmt * 3.6).toFixed(2);
-    pesto.cheese = (basilAmt * 0.6).toFixed(2);
-    pesto.nuts = (basilAmt * 0.6).toFixed(2);
-    pesto.oil = (basilAmt * 1.87).toFixed(2);
+    pesto.pasta = (basilAmt * 3.6).toFixed(1);
+    pesto.cheese = (basilAmt * 0.6).toFixed(1);
+    pesto.nuts = (basilAmt * 0.6).toFixed(1);
+    pesto.oil = (basilAmt * 1.87).toFixed(1);
 }
 
 const changeUnits = (value) => {
