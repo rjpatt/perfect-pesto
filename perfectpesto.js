@@ -11,6 +11,7 @@ const recipeBox = document.querySelector('#recipe');
 const qtyForm = document.querySelector('#qtyForm');
 const unitToggle = document.querySelector('#selectedUnits');
 const unitText = document.querySelectorAll('.unit-txt');
+const oilUnitTxt = document.querySelector('.oil-unit');
 
 //a function to update the text in the recipe
 const updateRecipe = () => {
@@ -35,6 +36,7 @@ const changeUnits = (value) => {
     unitText.forEach((unit) => {
         unit.textContent = value;
     })
+    oilUnitTxt.textContent = value === 'grams' ? 'milliliters' : 'fluid ounces';
 }
 
 qtyForm.addEventListener('submit', function (e) {
