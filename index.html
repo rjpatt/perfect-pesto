@@ -32,6 +32,10 @@
         <label for="qty">Basil in grams</label>
         <!-- I want to make sure this is a number, but it could be a float. -->
         <input type="number" name="qty" id="qty" min="0" placeholder="70">
+        <select name="selectedUnits" id="selectedUnits">
+          <option value="grams">grams</option>
+          <option value="ounces">ounces</option>
+        </select>
         <!-- When submitted, the form will display the recipe with updated numbers. -->
         <button>Give me the recipe!</button>
     </form>
