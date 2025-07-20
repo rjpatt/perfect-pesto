@@ -29,15 +29,19 @@
     <!-- This is the section that will actually take input -->
     <h2>How much basil do you have?</h2>
     <form id="qtyForm">
-        <label for="qty">Basil amount</label>
-        <!-- I want to make sure this is a number, but it could be a float. -->
-        <input type="number" name="qty" id="qty" min="0">
-        <select name="selectedUnits" id="selectedUnits">
-          <option value="grams">grams</option>
-          <option value="ounces">ounces</option>
-        </select>
-        <!-- When submitted, the form will display the recipe with updated numbers. -->
-        <button>Give me the recipe!</button>
+        <div>
+            <label for="qty">Basil amount</label>
+            <!-- I want to make sure this is a number, but it could be a float. -->
+            <input type="number" name="qty" id="qty" min="0">
+            <select name="selectedUnits" id="selectedUnits">
+              <option value="grams">grams</option>
+              <option value="ounces">ounces</option>
+            </select>
+        </div>
+        <div>
+            <!-- When submitted, the form will display the recipe with updated numbers. -->
+            <button>Give me the recipe!</button>
+        </div>
     </form>
     <!-- The recipe class is hidden by default, but will change to appearing once the button is pressed. -->
     <div id="recipe" class="hidden">
@@ -45,12 +49,12 @@
         <h3>Ingredients</h3>
         <ul>
             <!-- The spans below contain the amount in grams (or mLs) of each ingredient. These will be changed upon submitting the form. -->
-            <li>Your <span class="basil-grams">70</span> <span class="unit-txt">grams</span> of basil</li>
-            <li><span class="pasta">252</span> <span class="unit-txt">grams</span> of short pasta, such as penne</li>
-            <li><span class="cheese">42</span> <span class="unit-txt">grams</span> of Parmigiano Reggiano, Grana Padano, or similar</li>
-            <li><span class="nuts">42</span> <span class="unit-txt">grams</span> of nuts (we prefer walnuts, but pine nuts are the classic nut for
+            <li>Your <em><span class="basil-grams">70</span></em> <span class="unit-txt">grams</span> of basil</li>
+            <li><em><span class="pasta">252</span></em> <span class="unit-txt">grams</span> of short pasta, such as penne</li>
+            <li><em><span class="cheese">42</span></em> <span class="unit-txt">grams</span> of Parmigiano Reggiano, Grana Padano, or similar</li>
+            <li><em><span class="nuts">42</span></em> <span class="unit-txt">grams</span> of nuts (we prefer walnuts, but pine nuts are the classic nut for
                 pesto</li>
-            <li><span class="oil">130.9</span> milliliters of oil</li>
+            <li><em><span class="oil">130.9</span></em> milliliters of oil</li>
             <li>Lots of garlic (follow your heart!). We like minced garlic in oil, but you can use fresh garlic if
                 preferred.</li>
             <li>Salt to taste</li>
