@@ -9,6 +9,8 @@ const pesto = {
 //selecting the recipe ID to add and remove classes
 const recipeBox = document.querySelector('#recipe');
 const qtyForm = document.querySelector('#qtyForm');
+const unitToggle = document.querySelector('#selectedUnits');
+const unitText = document.querySelectorAll('.unit-txt');
 
 //a function to update the text in the recipe
 const updateRecipe = () => {
@@ -28,6 +30,12 @@ const calcPesto = basilAmount => {
     pesto.oil = (basilAmount * 1.87).toFixed(2);
 }
 
+const changeUnits = (value) => {
+    unitText.forEach(unit) => {
+        unit = value;
+    }
+}
+
 qtyForm.addEventListener('submit', function (e) {
     e.preventDefault();
     const qty = qtyForm.elements.qty;
@@ -36,3 +44,7 @@ qtyForm.addEventListener('submit', function (e) {
     recipeBox.classList.remove('hidden');
     qty.value = '';
 })
+
+unitToggle.addEventListener('select', function (e) {
+    changeUnits(e.target.value);
+}
