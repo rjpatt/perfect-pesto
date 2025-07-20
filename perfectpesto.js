@@ -22,10 +22,10 @@ const updateRecipe = () => {
 //a function to update the pesto object with ingredient amounts based on user input
 const calcPesto = basilAmount => {
     pesto.basil = basilAmount;
-    pesto.pasta = (basilAmount * 3.6);
-    pesto.cheese = (basilAmount * 0.6);
-    pesto.nuts = (basilAmount * 0.6);
-    pesto.oil = (basilAmount * 1.87);
+    pesto.pasta = (basilAmount * 3.6).toFixed(2);
+    pesto.cheese = (basilAmount * 0.6).toFixed(2);
+    pesto.nuts = (basilAmount * 0.6).toFixed(2);
+    pesto.oil = (basilAmount * 1.87).toFixed(2);
 }
 
 qtyForm.addEventListener('submit', function (e) {
