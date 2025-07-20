@@ -31,9 +31,9 @@ const calcPesto = basilAmount => {
 }
 
 const changeUnits = (value) => {
-    unitText.forEach(unit) => {
+    unitText.forEach((unit) => {
         unit = value;
-    }
+    })
 }
 
 qtyForm.addEventListener('submit', function (e) {
