@@ -47,4 +47,4 @@ qtyForm.addEventListener('submit', function (e) {
 
 unitToggle.addEventListener('select', function (e) {
     changeUnits(e.target.value);
-}
+})
