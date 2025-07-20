@@ -23,16 +23,17 @@ const updateRecipe = () => {
 
 //a function to update the pesto object with ingredient amounts based on user input
 const calcPesto = basilAmount => {
-    pesto.basil = basilAmount;
-    pesto.pasta = (basilAmount * 3.6).toFixed(2);
-    pesto.cheese = (basilAmount * 0.6).toFixed(2);
-    pesto.nuts = (basilAmount * 0.6).toFixed(2);
-    pesto.oil = (basilAmount * 1.87).toFixed(2);
+    const basilAmt = parseFloat(basilAmount);
+    pesto.basil = basilAmt;
+    pesto.pasta = (basilAmt * 3.6).toFixed(2);
+    pesto.cheese = (basilAmt * 0.6).toFixed(2);
+    pesto.nuts = (basilAmt * 0.6).toFixed(2);
+    pesto.oil = (basilAmt * 1.87).toFixed(2);
 }
 
 const changeUnits = (value) => {
     unitText.forEach((unit) => {
-        unit = value;
+        unit.textContent = value;
     })
 }
 
@@ -45,6 +46,6 @@ qtyForm.addEventListener('submit', function (e) {
     qty.value = '';
 })
 
-unitToggle.addEventListener('select', function (e) {
+unitToggle.addEventListener('change', function (e) {
     changeUnits(e.target.value);
 })
